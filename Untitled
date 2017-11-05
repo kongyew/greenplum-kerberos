@@ -1,0 +1,20 @@
+export JAVA_OPTS=" -Djava.security.auth.login.config=/home/gpadmin/.java.login.config -Dsun.security.krb5.debug=true -Djavax.net.debug=all  -Dsun.security.krb5.principal=gpadmin/kdc-kadmin"
+
+export JAVA_OPTS=" -Djava.security.auth.login.config=/home/gpadmin/.java.login.config -Dsun.security.krb5.debug=true -Djavax.net.debug=all "
+
+
+java $JAVA_OPTS -classpath ./greenplum.jar:./postgresql-42.1.4.jar:./JDBCTest-1.0.jar io.pivotal.support.JDBCTest "jdbc:postgresql://localhost:5432/testdb?kerberosServerName=gpadmin&jaasApplicationName=pgjdbc&user=gpadmin/kdc-kadmin&loggerLevel=TRACE&loggerFile=pgjdbctrace.log" "select count(*) from account" com.pivotal.jdbc.GreenplumDriver
+
+
+java $JAVA_OPTS -classpath ./greenplum.jar:./postgresql-42.1.4.jar:./JDBCTest-1.0.jar io.pivotal.support.JDBCTest "jdbc:postgresql://localhost:5432/testdb?kerberosServerName=gpadmin&jaasApplicationName=pgjdbc&user=gpadmin/kdc-kadmin&&loggerLevel=TRACE&loggerFile=pgjdbctrace.log" "select count(*) from account" com.pivotal.jdbc.GreenplumDriver
+
+
+
+CREATE TABLE account(
+ user_id serial PRIMARY KEY,
+ username VARCHAR (50)  NOT NULL,
+ password VARCHAR (50) NOT NULL,
+ email VARCHAR (355)  NOT NULL,
+ created_on TIMESTAMP NOT NULL,
+ last_login TIMESTAMP
+);

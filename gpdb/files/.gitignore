@@ -1,0 +1,25 @@
+.idea/*
+*.bak
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+
+
+# Docker project generated files to ignore
+#  if you want to ignore files created by your editor/tools,
+#  please consider a global .gitignore https://help.github.com/articles/ignoring-files
+*.exe
+*.exe~
+*.orig
+test.main
+.*.swp
+.DS_Store
+*.keytab
+greenplum.jar
+jce_policy-8.zip
