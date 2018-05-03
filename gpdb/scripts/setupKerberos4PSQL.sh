@@ -50,16 +50,18 @@ echo $PG_HBA_CONF_ENABLE_KERBEROS >> $PG_HBA_CONF
 
 echo "========================================================================="
 echo " Replace host all all 0.0.0.0/0 md5 with #host all all 0.0.0.0/0 md5"
-sed -i -e"s/^host all all 0.0.0.0/0 md5.*$/#host all all 0.0.0.0/0 md5/" $POSTGRES_CONF
+# sed -i -e"s/^host all all 0.0.0.0\/0 md5/#host all all 0.0.0.0\/0 md5/"  /gpdata/master/gpseg-1/pg_hba.conf
+sed -i -e"s/^host all all 0.0.0.0\/0 md5/#host all all 0.0.0.0\/0 md5/" $POSTGRES_CONF
 echo "========================================================================="
 echo "Stop GPDB admin and Start GPDB admin"
 export MASTER_DATA_DIRECTORY=/gpdata/master/gpseg-1
 source /usr/local/greenplum-db/greenplum_path.sh
 gpstop -a
-sed -i -e"s/^host all all 0.0.0.0/0 md5.*$/#host all all 0.0.0.0/0 md5/" $POSTGRES_CONF
+sed -i -e"s/^host all all 0.0.0.0\/0 md5/#host all all 0.0.0.0\/0 md5/" $POSTGRES_CONF
 gpstart -a
 echo "========================================================================="
 #su gpadmin -c "psql -U "gpadmin/kdc-kadmin" -h gpdbsne.example.com postgres"
+echo "psql -U \"gpadmin/kdc-kadmin\" -h gpdbsne.example.com postgres"
 psql -U "gpadmin/kdc-kadmin" -h gpdbsne.example.com postgres
 
 #logs

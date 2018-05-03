@@ -9,6 +9,7 @@ KADMIN_PRINCIPAL_FULL=$KADMIN_PRINCIPAL@$REALM
 GPADMIN_PRINCIPAL_FULL=$GPADMIN_PRINCIPAL@$REALM
 POSTGRES_PRINCIPAL_FULL=$POSTGRES_PRINCIPAL@$REALM
 GPADMIN_ADMIN_PRINCIPAL_FULL=$GPADMIN_ADMIN_PRINCIPAL@$REALM
+SPARK_PRINCIPAL_FULL=$SPARK_PRINCIPAL@$REALM
 
 echo "REALM: $REALM"
 echo "KADMIN_PRINCIPAL_FULL: $KADMIN_PRINCIPAL_FULL"
@@ -17,6 +18,11 @@ echo ""
 echo "GPADMIN_PRINCIPAL_FULL: $GPADMIN_PRINCIPAL_FULL"
 echo "GPADMIN_PASSWORD: $GPADMIN_PASSWORD"
 echo ""
+echo "SPARK_PRINCIPAL_FULL: $SPARK_PRINCIPAL_FULL"
+echo "SPARK_PASSWORD: $GPADMIN_PASSWORD"
+echo ""
+
+
 echo "The Kerberos service principal name is formed as "
 echo "<service name>/<fully qualified hostname>@KerberosRealm, and is used to verify"
 echo " incoming Kerberos token requests."
@@ -117,7 +123,7 @@ echo ""
 kadmin.local -q "addprinc -pw $GPADMIN_ADMIN_PASSWORD noPermissions@$REALM"
 echo ""
 
-
+################################################################################
 #https://gpdb.docs.pivotal.io/500/admin_guide/kerberos.html
 # The first addprinc creates a Greenplum Database user as a principal, gpadmin/kerberos-gpdb.
 echo "Adding [$GPADMIN_PRINCIPAL] principal for gpadmin "
@@ -132,6 +138,7 @@ kadmin.local -q "delete_principal -force noPermissions@$REALM"
 echo ""
 kadmin.local -q "addprinc -pw $GPADMIN_PASSWORD noPermissions@$REALM"
 echo ""
+################################################################################
 
 # The second addprinc command creates the postgres process on the Greenplum Database master host as a principal in the Kerberos KDC.
 # This principal is required when using Kerberos authentication with Greenplum Database.

@@ -50,9 +50,10 @@ docker exec -it gpdbsne bin/bash
 ```
 
 3. Change user as gpadmin. Copy kerberos tab file from shared folder `code` to `home/gpadmin`
+```
 [root@gpdbsne /]# su gpadmin
 [gpadmin@gpdbsne /]$ cp /code/gpdb-kerberos.keytab  /home/gpadmin
-
+```
 4. Copy .java.login.conf to `/home/gpadmin`. This file is required for JDBC with Kerberos
 ```
 [gpadmin@gpdbsne /]$ cp /code/gpdb/files/.java.login.config /home/gpadmin
@@ -74,14 +75,13 @@ Valid starting     Expires            Service principal
 11/05/17 21:01:10  11/06/17 21:01:10  krbtgt/EXAMPLE.COM@EXAMPLE.COM
 ```
 6. Configure Kerberos settings by running this script
+```
+[gpadmin@gpdbsne /]$ /code/gpdb/scripts/setupKerberos4PSQL.sh
+```
 - Execute `psql postgres -c 'create role "gpadmin/kdc-kadmin" login superuser;'`
 - Add `krb_server_keyfile = /home/gpadmin/gpdb-kerberos.keytab` to this file: postgresql.conf
 - Add `host all all 0.0.0.0/0 gss include_realm=0 krb_realm=EXAMPLE.COM` to this file  /gpdata/master/gpseg-1/pg_hba.conf
 - Restart GPDB
-```
-[gpadmin@gpdbsne /]$ setupKerberos4PSQL.sh
-```
-
 7. Verify Greenplum authenticates users with Kerberos KDC.
 Next, login as `gpadmin/kdc-kadmin` to the greenplum database. No password is required.
 
@@ -109,6 +109,6 @@ If you want to keep up with the possible changes of this repo, you can use:
 ## License
 This example is open source and available under the [MIT license](LICENSE).
 
-
-https://gpdb.docs.pivotal.io/43170/admin_guide/kerberos.html
-https://discuss.pivotal.io/hc/en-us/articles/218385957-How-to-provide-Single-Sign-On-to-the-Greenplum-Database-with-Microsoft-Active-Directory
+Reference:
+# https://gpdb.docs.pivotal.io/43170/admin_guide/kerberos.html
+# https://discuss.pivotal.io/hc/en-us/articles/218385957-How-to-provide-Single-Sign-On-to-the-Greenplum-Database-with-Microsoft-Active-Directory

@@ -1,7 +1,7 @@
 #!/bin/bash
-export DOCKER_LABEL="GPDB 4.3.x with Kerberos"
-export DOCKER_TAG="kochan/gpdb5.1"
-export DOCKER_LATEST_TAG="kochan/gpdb5.1:latest"
+export DOCKER_LABEL="Kerberos"
+export DOCKER_TAG="kochanpivotal/gpdb5.1"
+export DOCKER_LATEST_TAG="kochanpivotal/gpdb5.1:latest"
 
 #--build-arg GPDB_VERSION=${GPDB_VERSION}
 

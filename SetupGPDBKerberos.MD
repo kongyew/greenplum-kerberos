@@ -15,7 +15,6 @@ The role you create in the database template1 will be available in any new Green
 
 Modify postgresql.conf to specify the location of the keytab file. For example, adding this line to the postgresql.conf specifies the folder /home/gpadmin as the location of the keytab file gpdb-kerberos.keytab.
 
-
 /gpdata/master/gpseg-1/postgresql.conf
 
 ```
