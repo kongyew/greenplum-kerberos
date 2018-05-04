@@ -1,7 +1,4 @@
-troubleshooting-JDBC.md
-
-
-
+This page describes common troubleshooting procedures for Greenplum with Kerberos.
 ## How to enable debugging for kerberos via JDBCTest
 ```
 export JAVA_OPTS="-Dsun.security.krb5.debug=true -Dsun.security.krb5.debug=true"

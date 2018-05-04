@@ -110,5 +110,5 @@ If you want to keep up with the possible changes of this repo, you can use:
 This example is open source and available under the [MIT license](LICENSE).
 
 Reference:
-# https://gpdb.docs.pivotal.io/43170/admin_guide/kerberos.html
-# https://discuss.pivotal.io/hc/en-us/articles/218385957-How-to-provide-Single-Sign-On-to-the-Greenplum-Database-with-Microsoft-Active-Directory
+[Greenplum Kerberos docs](https://gpdb.docs.pivotal.io/43170/admin_guide/kerberos.html)
+[Greenplum with Single sign-on with Active Directory](https://discuss.pivotal.io/hc/en-us/articles/218385957-How-to-provide-Single-Sign-On-to-the-Greenplum-Database-with-Microsoft-Active-Directory)
