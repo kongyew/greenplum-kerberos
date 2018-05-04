@@ -4,12 +4,12 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-#url: "https://kongc-organization.github.io/greenplum-streamsets/"
+#url: "http://username.github.io"
 #baseurl: ""
-#remote_theme: daattali/beautiful-jekyll
+
 # If you are building a GitHub project page then use these settings:
-url: "https://github.com/kongyew/greenplum-kerberos"
-baseurl: "/greenplum-kerberos"
+# url: "https://kongyew.github.io/greenplum-kerberos"
+# baseurl: "/greenplum-kerberos"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
@@ -17,7 +17,7 @@ baseurl: "/greenplum-kerberos"
 title: Greenplum with Kerberos
 
 # Short description of your site
-description: This site provides use cases and examples for Greenplum with Kerberos
+description: A virtual proof that name is awesome!
 
 # --- Navigation bar options --- #
 
@@ -25,12 +25,10 @@ description: This site provides use cases and examples for Greenplum with Kerber
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Greenplum home: "http://www.greenplum.org"
-    - Using Kerberos Authentication: "https://gpdb.docs.pivotal.io/570/admin_guide/kerberos.html"
-    - GitHub Pages: "https://pages.github.com/"
+    - Greenplum docs: "https://gpdb.docs.pivotal.io/"
+    # - Using Greenplum with Kerberos Authentication: "http://www.markdowntutorial.com/"
+    # - GitHub Pages: "https://pages.github.com/"
 
-
-#  Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -80,7 +78,7 @@ social-network-links:
   twitter: kongyew
 #  reddit: yourname
 #  google-plus: +DeanAttali
-   linkedin: kongyew
+#  linkedin: daattali
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -101,7 +99,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://kongc-organization.github.io/greenplum-streamsets/"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "kongyew.github.io/greenplum-kerberos/"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -138,9 +136,8 @@ title-separator: "-"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/"
+timezone: "America/Vancouver"
 markdown: kramdown
-
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
