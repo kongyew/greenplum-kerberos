@@ -109,6 +109,6 @@ If you want to keep up with the possible changes of this repo, you can use:
 ## License
 This example is open source and available under the [MIT license](LICENSE).
 
-Reference:
+## Reference:
 [Greenplum Kerberos docs](https://gpdb.docs.pivotal.io/43170/admin_guide/kerberos.html)
 [Greenplum with Single sign-on with Active Directory](https://discuss.pivotal.io/hc/en-us/articles/218385957-How-to-provide-Single-Sign-On-to-the-Greenplum-Database-with-Microsoft-Active-Directory)
