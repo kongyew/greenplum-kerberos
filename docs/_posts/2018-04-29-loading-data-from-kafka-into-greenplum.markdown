@@ -13,6 +13,8 @@ This [repository](https://kongyew.github.io/greenplum-kerberos/) demonstrates ho
 The Pivotal Greenplum Database (GPDB) is an advanced, fully featured, open source data warehouse. It provides powerful and rapid analytics on petabyte scale data volumes. Uniquely geared toward big data analytics, Greenplum Database is powered by the world’s most advanced cost-based query optimizer delivering high analytical query performance on large data volumes.
 <https://pivotal.io/pivotal-greenplum>
 
+[Greenplum documentation for Kerberos Authentication]: https://gpdb.docs.pivotal.io/570/admin_guide/kerberos.html
 
-[Greenplum product]: https://pivotal.io/pivotal-greenplum
 [Greenplum documentations]: https://https://gpdb.docs.pivotal.io/
+[Greenplum product]: https://pivotal.io/pivotal-greenplum
+[Greenplum Open Source]: https://www.greenplum.org
