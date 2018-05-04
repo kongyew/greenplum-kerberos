@@ -14,7 +14,7 @@ The Pivotal Greenplum Database (GPDB) is an advanced, fully featured, open sourc
 <https://pivotal.io/pivotal-greenplum>
 
 [Greenplum documentation for Kerberos Authentication]: https://gpdb.docs.pivotal.io/570/admin_guide/kerberos.html
-
+[Greenplum Kerberos Guide]: http://dewoods.com/blog/greenplum-kerberos-guide
 [Greenplum documentations]: https://https://gpdb.docs.pivotal.io/
 [Greenplum product]: https://pivotal.io/pivotal-greenplum
 [Greenplum Open Source]: https://www.greenplum.org
